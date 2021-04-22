@@ -29,44 +29,44 @@ public class MaxDepthOfBinaryTree {
     public static int maxDepth(TreeNode root) {
 
         // optimized approach using recursion strategy
-        // if (root == null) {
-        // return 0;
-        // } else {
-        // // Math.max returns highest value between given two values
-        // return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
-        // }
-
-        // bruteforce approach;
-
-        if (root == null)
+        if (root == null) {
             return 0;
-
-        Stack<Integer> depthStack = new Stack<>();
-        Stack<TreeNode> stack = new Stack<>();
-        int max = 1;
-        stack.push(root);
-        depthStack.push(1);
-
-        while (!stack.isEmpty()) {
-            TreeNode current = stack.pop();
-            Integer depth = depthStack.pop();
-
-            if (current.left == null && current.right == null) {
-                max = Integer.max(max, depth);
-            }
-            if (current.left != null) {
-                stack.add(current.left);
-                depthStack.add(depth + 1);
-            }
-
-            if (current.right != null) {
-                stack.add(current.right);
-                depthStack.add(depth + 1);
-            }
-
+        } else {
+            // Math.max returns highest value between given two values
+            return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
         }
 
-        return max;
+        // naive approach;
+
+//        if (root == null)
+//            return 0;
+//
+//        Stack<Integer> depthStack = new Stack<>();
+//        Stack<TreeNode> stack = new Stack<>();
+//        int max = 1;
+//        stack.push(root);
+//        depthStack.push(1);
+//
+//        while (!stack.isEmpty()) {
+//            TreeNode current = stack.pop();
+//            Integer depth = depthStack.pop();
+//
+//            if (current.left == null && current.right == null) {
+//                max = Integer.max(max, depth);
+//            }
+//            if (current.left != null) {
+//                stack.add(current.left);
+//                depthStack.add(depth + 1);
+//            }
+//
+//            if (current.right != null) {
+//                stack.add(current.right);
+//                depthStack.add(depth + 1);
+//            }
+//
+//        }
+//
+//        return max;
     }
 
     public static void main(String[] args) {

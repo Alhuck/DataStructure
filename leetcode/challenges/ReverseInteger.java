@@ -42,10 +42,10 @@ public class ReverseInteger {
         // return Integer.parseInt(new String(sb));
     }
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        int x = -123123213;
-        System.out.println(reverse(x));
-    }
+//    public static void main(String[] args) {
+//        // TODO Auto-generated method stub
+//        int x = -123123213;
+//        System.out.println(reverse(x));
+//    }
 
 }
