@@ -1,4 +1,4 @@
-package diy.learnings.searching;
+package Searching;
 
 public class InterpolationSearch {
 

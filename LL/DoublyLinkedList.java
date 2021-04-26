@@ -1,4 +1,4 @@
-package diy.learnings.LL;
+package LL;
 
 public class DoublyLinkedList {
 

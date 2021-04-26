@@ -1,4 +1,4 @@
-package diy.learnings.leetcode.challenges;
+package leetcode.challenges;
 
 import java.util.LinkedHashSet;
 import java.util.Set;

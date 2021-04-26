@@ -1,4 +1,4 @@
-package diy.learnings.java;
+package java;
 
 public class Solution {
 

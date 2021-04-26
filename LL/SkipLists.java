@@ -1,4 +1,4 @@
-package diy.learnings.LL;
+package LL;
 
 import java.util.Random;
 

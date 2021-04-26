@@ -1,4 +1,4 @@
-package diy.learnings.leetcode.challenges;
+package leetcode.challenges;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

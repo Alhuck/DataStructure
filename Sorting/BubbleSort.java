@@ -1,4 +1,4 @@
-package diy.learnings.sorting;
+package Sorting;
 
 public class BubbleSort {
 

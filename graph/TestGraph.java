@@ -1,4 +1,4 @@
-package diy.learnings.graph;
+package graph;
 
 import java.util.Set;
 

@@ -1,4 +1,4 @@
-package diy.learnings.tree;
+package BinaryTree;
 
 class TreeNode {
 
