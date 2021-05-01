@@ -2,66 +2,59 @@ package Searching;
 
 public class BinarySearch {
 
-	static Integer[] arr = new Integer[] { 40, 80, 01, 78, 645 };
+    static Integer[] arr = new Integer[] { 01, 40, 78, 80, 645 };
 
-	static void sortArr() {
+    static void sortArr() {
 
-		for (int i = 1; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
 
-			int valueToInsert = arr[i];
-			int holePosition = i;
+            int valueToInsert = arr[i];
+            int holePosition = i;
 
-			while (holePosition > 0 && arr[holePosition - 1] > valueToInsert) {
-				arr[holePosition] = arr[holePosition - 1];
-				holePosition = holePosition - 1;
-			}
+            while (holePosition > 0 && arr[holePosition - 1] > valueToInsert) {
+                arr[holePosition] = arr[holePosition - 1];
+                holePosition = holePosition - 1;
+            }
 
-			arr[holePosition] = valueToInsert;
-		}
-	}
+            arr[holePosition] = valueToInsert;
+        }
+    }
 
-	static Integer binarySearch(int searchItem) {
+    static Integer binarySearch(int searchItem) {
 
-		// sorting the collection before searching
-		sortArr();
-		int low = 0;
-		int high = arr.length;
+        // sorting the collection before searching
+        // sortArr();
+        int low = 0;
+        int high = arr.length - 1;
 
-		boolean dataFound = false;
+        while (low <= high) {
 
-		while (!dataFound) {
-			// checking whether given collection is a valid data collection
-			if (high < low) {
-				System.out.println("data not found");
-				break;
-			}
-			// formula used to calculate the midpoint for binary search
-			int midpoint = low + (high - low) / 2;
+            int midpoint = low + ((high - low) / 2);
 
-			if (arr[midpoint] == searchItem) {
-				dataFound = true;
-				return midpoint;
-			}
-			// low value is incremented from mid
-			if (arr[midpoint] < searchItem) {
-				low = midpoint + 1;
-			}
+            if (arr[midpoint] == searchItem) {
+                return midpoint;
+            }
 
-			// mid value is incremented from mid
-			if (arr[midpoint] > searchItem) {
-				high = midpoint - 1;
-			}
-		}
+            if (arr[midpoint] > searchItem) {
+                low = midpoint + 1;
+            }
 
-		return null;
-	}
+            if (arr[midpoint] < searchItem) {
+                high = midpoint - 1;
+            }
 
-	public static void main(String[] args) {
+        }
 
-		Integer searchItemIndex = binarySearch(100);
-		if (searchItemIndex != null) {
-			System.out.println("The element is found at " + searchItemIndex + " position of given sorted array");
-		}
-	}
+        return -1;
+
+    }
+
+    public static void main(String[] args) {
+
+        Integer searchItemIndex = binarySearch(80);
+        if (searchItemIndex != null) {
+            System.out.println("The element is found at " + searchItemIndex + " position of given sorted array");
+        }
+    }
 
 }
