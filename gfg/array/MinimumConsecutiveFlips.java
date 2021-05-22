@@ -18,7 +18,7 @@ public class MinimumConsecutiveFlips {
         }
 
         // when the first and last element of the array are different,
-        // the for loop will print the start of element group 
+        // the for loop above will print the start of element group 
         // end will be printed here!
         if (arr[arr.length - 1] != arr[0]) {
             System.out.print(arr.length - 1);

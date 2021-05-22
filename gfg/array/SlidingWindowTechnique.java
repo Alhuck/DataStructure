@@ -1,7 +1,7 @@
 package gfg.array;
 
 //Time complexity: O(n)
-public class WindowSlidingTechnique {
+public class SlidingWindowTechnique {
 
     public static int getMaxSumOfKElementsInArray(int[] arr, int k) {
         int res = 0;

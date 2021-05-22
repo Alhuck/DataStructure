@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class RemoveDuplicates {
 
-    public static int[] remDupe(int[] arr) {
+    public static int remDupe(int[] arr) {
 
         int res = 1;
         for (int i = 1; i < arr.length; i++) {
@@ -14,14 +14,15 @@ public class RemoveDuplicates {
                 res++;
             }
         }
-        return arr;
+        return res;
     }
 
     public static void main(String[] args) {
 
         int[] arr = { 8, 10, 15, 20, 20, 30, 30, 30, 30, 30 };
-        Arrays.stream(remDupe(arr))
-            .forEach(ele -> System.out.print(ele + " "));
+        for (int i = 0; i < remDupe(arr); i++) {
+            System.out.print(arr[i] + " ");
+        }
 
     }
 

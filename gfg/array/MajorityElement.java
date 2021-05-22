@@ -5,19 +5,19 @@ public class MajorityElement {
 
     public static int getMajorityElementIndex(int[] arr) {
 
-        int res = 0;
+        int index = 0; // max occuring ele index
         int count = 1;
 
         // this block is to find the index of the majority element
         for (int i = 1; i < arr.length; i++) {
 
-            if (arr[res] == arr[i]) {
+            if (arr[index] == arr[i]) {
                 count++;
             } else {
                 count--;
             }
             if (count == 0) {
-                res = i;
+                index = i;
                 count = 1;
             }
         }
@@ -25,13 +25,13 @@ public class MajorityElement {
         // below code is to check whether the element came more than n/2 times, to consider it as majority element of the array
         int total_occurance = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[res] == arr[i]) {
+            if (arr[index] == arr[i]) {
                 total_occurance++;
             }
         }
 
         if (total_occurance > (arr.length / 2)) {
-            return res;
+            return index;
         } else {
             return -1;
         }
