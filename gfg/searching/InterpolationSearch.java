@@ -1,4 +1,4 @@
-package Searching;
+package gfg.searching;
 
 public class InterpolationSearch {
 
